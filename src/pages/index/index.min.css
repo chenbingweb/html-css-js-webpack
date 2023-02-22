@@ -1,1 +1,1 @@
-.index_page{width:100%;height:100vh;display:flex;justify-content:center;align-items:center;background-color:yellow}
+.index_page{width:100%;height:100vh;display:flex;justify-content:flex-start;align-items:center;flex-direction:column;background-color:yellow}.index_page .banner{height:300px;overflow:hidden}@media screen and (max-width: 1200px){.index_page .banner{height:200px}}.index_page .banner img{width:100%}

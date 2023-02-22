@@ -9,13 +9,13 @@ module.exports = Object.assign(base, {
   watchOptions: {
     ignored: [
       path.resolve(__dirname, "node_modules"),
-      path.resolve(__dirname, "dist"),
+      //   path.resolve(__dirname, "dist"),
     ],
   },
   devServer: {
     hot: true,
     static: {
-      directory: path.join(__dirname, "src"),
+      directory: path.join(__dirname, "dist"),
     },
     compress: true,
     port: 9090,
@@ -43,7 +43,19 @@ module.exports = Object.assign(base, {
 
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset",
+        generator: {
+          filename: (pathData) => {
+            let path = pathData.module.rawRequest.match(/\/images\/\w*\//);
+            path = path
+              ? path[0] + "[name][ext][query]"
+              : "images/[name][ext][query]";
+
+            console.log(path);
+            return path;
+          },
+          //filename: "images/[name]_[hash:6][ext][query]",
+        },
+        type: "asset/resource",
       },
     ],
   },

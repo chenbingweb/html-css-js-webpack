@@ -37,7 +37,8 @@ let temps = pages.map((item) => {
     templateParameters: {
       css: [
         "./libs/css/normalize.css",
-        "./libs/css/animat.css",
+        "./libs/css/animate.min.css",
+        "./libs/css/custom-animate.min.css",
         "./libs/css/element.css",
       ],
       js: [

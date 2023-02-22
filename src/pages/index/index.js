@@ -11,6 +11,7 @@ class Page extends Main {
     this.initEvent();
   }
   initVue() {
+    let that = this;
     this.vue = new Vue({
       el: "#index_page",
       data() {
@@ -18,37 +19,30 @@ class Page extends Main {
           a: "vue",
         };
       },
+      created() {},
+      methods: {
+        onClick() {
+          that.tipShow("2323");
+        },
+      },
     });
     console.log(this.vue);
   }
   initEvent() {
     setTimeout(() => {
       this.hideLoading();
-    }, 2000);
-    $("button").click(() => {
-      this.delay().then(() => {
-        alert(2);
-      });
-    });
+    }, 1000);
   }
   delay() {
     let t = new Promise((r) => {
       setTimeout(() => {
-        r(1);
+        r(true);
       }, 2000);
     });
     return t;
   }
 }
 window.onload = () => {
-  //   new Page();
-  console.log(2323);
-  new Vue({
-    el: "#index_page",
-    data() {
-      return {
-        a: "vue",
-      };
-    },
-  });
+  new Page();
+  console.log("index");
 };

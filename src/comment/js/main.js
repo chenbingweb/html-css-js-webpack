@@ -101,15 +101,15 @@ export default class Main {
       $("._tip_box_").remove();
     }
     var ele = $(
-      '<div class="_tip_box_"><div class="_tip_cion">' +
+      '<div class="_tip_box_ "><div class="_tip_cion">' +
         (tip || "数据错误") +
         "</div></div>"
     );
     $("body").append(ele);
-
-    AnimationCss(ele, "_animation_tip_show").then(function () {
+    let that = this;
+    this.AnimationCss(ele, "_animation_tip_show").then(function () {
       setTimeout(function () {
-        AnimationCss(ele, "_animation_tip_hide").then(function () {
+        that.AnimationCss(ele, "_animation_tip_hide").then(function () {
           $("._tip_box_").remove();
         });
       }, time || 2000);
