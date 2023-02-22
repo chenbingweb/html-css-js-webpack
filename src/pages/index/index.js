@@ -26,7 +26,6 @@ class Page extends Main {
         },
       },
     });
-    console.log(this.vue);
   }
   initEvent() {
     setTimeout(() => {
