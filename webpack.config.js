@@ -7,6 +7,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const base = require("./webpack.base");
 module.exports = Object.assign(base, {
   mode: "production",
+  // 代码拆分
   optimization: {
     splitChunks: {
       chunks: "all",
