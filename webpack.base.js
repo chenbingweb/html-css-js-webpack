@@ -2,6 +2,8 @@ const path = require("path");
 const { temps, enterConfig } = require("./config/pages.config");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WebpackBar = require("webpackbar");
+const ProgressBarWebpackPlugin = require("progress-bar-webpack-plugin");
 module.exports = {
   entry: {
     main: {
@@ -22,6 +24,8 @@ module.exports = {
     clean: true,
   },
   plugins: [
+    new WebpackBar(),
+    new ProgressBarWebpackPlugin(),
     // css文件 抽离
     new MiniCssExtractPlugin({
       filename: "./css/[name].css",
