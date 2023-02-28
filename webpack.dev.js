@@ -37,6 +37,18 @@ module.exports = Object.assign(base, {
           },
           {
             loader: "css-loader",
+            options: {
+              importLoaders: 1, //设置在 css-loader 前应用的 loader 数量
+            },
+          },
+          {
+            loader: "postcss-loader",
+
+            options: {
+              postcssOptions: {
+                plugins: [["postcss-preset-env", {}]],
+              },
+            },
           },
         ],
       },
@@ -49,8 +61,6 @@ module.exports = Object.assign(base, {
             path = path
               ? path[0] + "[name][ext][query]"
               : "images/[name][ext][query]";
-
-            console.log(path);
             return path;
           },
           //filename: "images/[name]_[hash:6][ext][query]",

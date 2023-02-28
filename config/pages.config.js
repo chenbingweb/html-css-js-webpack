@@ -40,12 +40,14 @@ let temps = pages.map((item) => {
         "./libs/css/animate.min.css",
         "./libs/css/custom-animate.min.css",
         "./libs/css/element.css",
+        "./libs/css/swiper.min.css",
       ],
       js: [
         "./libs/js/jquery.min.js",
         "./libs/js/animation.js",
         "./libs/js/vue.js",
         "./libs/js/element.js",
+        "./libs/js/swiper.min.js",
       ],
     },
   });

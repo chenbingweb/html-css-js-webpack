@@ -84,8 +84,6 @@ module.exports = Object.assign(base, {
             path = path
               ? path[0] + "[name][ext][query]"
               : "images/[name][ext][query]";
-
-            console.log(path);
             return path;
           },
           //filename: "images/[name]_[hash:6][ext][query]",
