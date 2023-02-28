@@ -1,69 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="renderer" content="webkit">
-    <meta name="renderer" content="ie-stand">
-    <meta name="renderer" content="ie-comp">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no user-scalable=no">
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>
-        <%= htmlWebpackPlugin.options.title %>
-    </title>
-    <% for (var chunk in htmlWebpackPlugin.options.templateParameters.css) {%>
-        <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.templateParameters.css[chunk] %>">
-        <% } %>
-            <% for (var chunk in htmlWebpackPlugin.options.templateParameters.js) {%>
-                <script rel="stylesheet" src="<%= htmlWebpackPlugin.options.templateParameters.js[chunk] %>"></script>
-                <% } %>
-                    <% for (var chunk in htmlWebpackPlugin.files.css) { %>
-                        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[chunk] %>">
-                        <% } %>
-</head>
-
-<body>
+<% include('../comm/html-header.html') %>
     <% include('../comm/header.html') %>
-    <div class="index_page" id="index_page">
-        <div id="certify">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="<%= require('../../images/index/certify01.png')%>" />
-                        <p>非常难得又值钱的认证证书</p>
-                    </div>
-                    <div class="swiper-slide"><img src="<%= require('../../images/index/certify02.png')%>" />
-                        <p>深圳市优秀互联网企业认定证书</p>
-                    </div>
-                    <div class="swiper-slide"><img src="<%= require('../../images/index/certify03.png')%>" />
-                        <p>质量管理体系认证荣誉证书</p>
-                    </div>
-                    <div class="swiper-slide"><img src="<%= require('../../images/index/certify04.png')%>" />
-                        <p>计算机软件著作权登记证书</p>
-                    </div>
-                    <div class="swiper-slide"><img src="<%= require('../../images/index/certify05.png')%>" />
-                        <p>增值电信业务经营许可证</p>
+        <div class="index_page" id="index_page">
+            <div id="certify">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="<%= require('../../images/index/certify01.png')%>" />
+                            <p>非常难得又值钱的认证证书</p>
+                        </div>
+                        <div class="swiper-slide"><img src="<%= require('../../images/index/certify02.png')%>" />
+                            <p>深圳市优秀互联网企业认定证书</p>
+                        </div>
+                        <div class="swiper-slide"><img src="<%= require('../../images/index/certify03.png')%>" />
+                            <p>质量管理体系认证荣誉证书</p>
+                        </div>
+                        <div class="swiper-slide"><img src="<%= require('../../images/index/certify04.png')%>" />
+                            <p>计算机软件著作权登记证书</p>
+                        </div>
+                        <div class="swiper-slide"><img src="<%= require('../../images/index/certify05.png')%>" />
+                            <p>增值电信业务经营许可证</p>
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="banner">
+                <img src="<%= require('../../images/index/sw.png')%>" alt="">
+            </div>
+
+            <h1 class="animate__animated animate__bounce">An animated element</h1>
+
+            <a href="/detail.html">To Tetail</a>
+
+            <button @click="onClick">Tip</button>
         </div>
-        <div class="banner">
-            <img src="<%= require('../../images/index/sw.png')%>" alt="">
-        </div>
-
-        <h1 class="animate__animated animate__bounce">An animated element</h1>
-
-        <a href="/detail.html">To Tetail</a>
-
-        <button @click="onClick">Tip</button>
-    </div>
-    <% for (var chunk in htmlWebpackPlugin.files.js) { %>
-        <script src="<%= htmlWebpackPlugin.files.js[chunk] %>"></script>
-        <% } %>
-</body>
-
-</html>
+        <% include('../comm/html-footer.html') %>
