@@ -141,6 +141,15 @@ module.exports = Object.assign(base, {
           ],
         },
       },
+      {
+        test: /\.html$/,
+        loader: "art-template-loader",
+        include: path.resolve(__dirname, "src/pages"),
+        options: {
+            // art-template options (if necessary)
+            // @see https://github.com/aui/art-template
+        }
+      }
     ],
   },
 });

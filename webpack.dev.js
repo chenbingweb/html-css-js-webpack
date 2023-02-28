@@ -18,7 +18,7 @@ module.exports = Object.assign(base, {
       directory: path.join(__dirname, "dist"),
     },
     compress: true,
-    port: 9090,
+    port: 9091,
   },
   optimization: {
     runtimeChunk: "single",
@@ -67,6 +67,15 @@ module.exports = Object.assign(base, {
         },
         type: "asset/resource",
       },
+      {
+            test: /\.html$/,
+            loader: "art-template-loader",
+            include: path.resolve(__dirname, "src/pages"),
+            options: {
+                // art-template options (if necessary)
+                // @see https://github.com/aui/art-template
+            }
+          }
     ],
   },
 });
