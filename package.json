@@ -19,6 +19,7 @@
     "art-template-loader": "^1.4.3",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
+    "chokidar": "^3.5.3",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",

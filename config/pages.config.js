@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 let pages = [
   {
     title: "首页",
@@ -16,6 +17,20 @@ let pages = [
     entrySrc: "./src/pages/detail/detail.js",
     jsName: "detail",
   },
+
+  
+
+  
+
+        
+      
+
+
+            //login
+            {"title":"login title","tempSrc":"src/pages/login/login.html","filename":"login.html","entryName":"login","entrySrc":"./src/pages/login/login.js","jsName":"login"},
+            //login
+          
+/*config*/
 ];
 
 let temps = pages.map((item) => {

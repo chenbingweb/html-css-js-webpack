@@ -2,7 +2,8 @@ const path = require("path");
 const base = require("./webpack.base");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const FileCreate = require("./file-create");
+FileCreate();
 module.exports = Object.assign(base, {
   mode: "development",
   devtool: "inline-source-map",
@@ -68,14 +69,14 @@ module.exports = Object.assign(base, {
         type: "asset/resource",
       },
       {
-            test: /\.html$/,
-            loader: "art-template-loader",
-            include: path.resolve(__dirname, "src/pages"),
-            options: {
-                // art-template options (if necessary)
-                // @see https://github.com/aui/art-template
-            }
-          }
+        test: /\.html$/,
+        loader: "art-template-loader",
+        include: path.resolve(__dirname, "src/pages"),
+        options: {
+          // art-template options (if necessary)
+          // @see https://github.com/aui/art-template
+        },
+      },
     ],
   },
 });
