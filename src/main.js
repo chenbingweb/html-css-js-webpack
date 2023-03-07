@@ -1,4 +1,4 @@
-import "./comment/css/comment.css";
+import "./comment/css/comment.scss";
 class GlobalFn {
   constructor() {
     this.init();

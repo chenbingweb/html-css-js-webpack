@@ -1,4 +1,4 @@
-import "./detail.css";
+import "./detail.scss";
 class Detail {
   constructor() {
     console.log("detail");

@@ -1,7 +1,7 @@
-import "./login.css";
-        class Login {
-          constructor() {
-            console.log("login");
-          }
-        }
-        new Login();
+import "./login.scss";
+            class Login {
+              constructor() {
+                console.log("login");
+              }
+            }
+            new Login();

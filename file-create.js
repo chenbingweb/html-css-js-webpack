@@ -26,11 +26,11 @@ module.exports = () => {
         <% include('../comm/html-footer.html') %>`
           ),
           createFiles(path + filepath, "scss", `div{width:100%}`),
-          createFiles(path + filepath, "css", `div{width:100%}`),
+          // createFiles(path + filepath, "css", `div{width:100%}`),
           createFiles(
             path + filepath,
             "js",
-            `import "./${filename}.css";
+            `import "./${filename}.scss";
             class ${upperFileName} {
               constructor() {
                 console.log("${filename}");

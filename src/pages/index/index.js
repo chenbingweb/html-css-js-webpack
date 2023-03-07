@@ -1,4 +1,4 @@
-import "./index.css";
+import "./index.scss";
 
 import Main from "../../comment/js/main";
 class Page extends Main {

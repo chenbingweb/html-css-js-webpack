@@ -1,0 +1,20 @@
+$root : 30em;
+$maxWidth: 1100px;
+$maxHeight: 800px;
+$minHeight: 750px;
+$pageWidth:1125px;
+$weight300:299;
+@function img($img) {
+    @return "/assets/images/comment/"+$img;
+}
+@function pageWidth(){
+    @return percentage($pageWidth/1440px);
+}
+@function p2r($a) {
+
+    @return ($a/16)+em;
+}
+@function pte($a) {
+    // @return $a + px
+    @return ($a/16)+em;
+}

@@ -50,7 +50,7 @@ module.exports = Object.assign(base, {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.scss$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -71,6 +71,15 @@ module.exports = Object.assign(base, {
               postcssOptions: {
                 plugins: [["postcss-preset-env", {}]],
               },
+            },
+          },
+          {
+            loader: "sass-loader",
+          },
+          {
+            loader: "sass-resources-loader",
+            options: {
+              resources: path.resolve(__dirname, "./src/comment/css/tool.scss"),
             },
           },
         ],
@@ -146,10 +155,10 @@ module.exports = Object.assign(base, {
         loader: "art-template-loader",
         include: path.resolve(__dirname, "src/pages"),
         options: {
-            // art-template options (if necessary)
-            // @see https://github.com/aui/art-template
-        }
-      }
+          // art-template options (if necessary)
+          // @see https://github.com/aui/art-template
+        },
+      },
     ],
   },
 });
